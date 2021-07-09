@@ -11,18 +11,12 @@ A
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 {
 Kapp/src/androidTest/java/com/itgonca/greatmovies/ExampleInstrumentedTest.kt,3\2\32b0f61dce4dc9b8ba06537b7798dcb6a894d5d0
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 l
 <app/src/test/java/com/itgonca/greatmovies/ExampleUnitTest.kt,5\a\5a55c85970853b2a0f6aeba616db44717c4bb511
 >
 app/.gitignore,5\1\51e1c5d383dfaa35e0e7e5873a0a99355a86880f
 F
 app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
-i
-9app/src/main/java/com/itgonca/greatmovies/MainActivity.kt,f\b\fb4ddc05b06a2c6f9df192be9562c732112c53c5
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35

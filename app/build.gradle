@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -15,6 +17,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", '"https://api.themoviedb.org/3/"'
+        buildConfigField "String", "API_TOKEN" , '"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMzhkYTFjMjBjYjkwYjRjN2FmY2QzY2YzMGM3NzVmYSIsInN1YiI6IjVlNGMyYmI3Mjg2NmZhMDAxODljZTAxZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bdmZkL9AgUX6wylg1DvVt-JtI6qwawg4dDMJcckyt2Q"'
     }
 
     buildTypes {
@@ -30,15 +34,46 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+
 }
 
 dependencies {
-
+    //Core
     implementation Deps.kotlin
     implementation Deps.corektx
+
+    //UI
     implementation Deps.appcompat
     implementation Deps.material
     implementation Deps.constraintLayout
+    implementation Deps.activityktx
+    implementation Deps.fragmentktx
+
+    //DI
+    implementation Deps.hiltAndroid
+    implementation Deps.hiltViewModel
+    kapt Deps.hiltCompiler
+    kapt Deps.hiltAndroidCompiler
+
+    //Navigation
+    implementation Deps.navigationFragment
+    implementation Deps.navigationUi
+
+    //Retrofit
+    implementation Deps.retrofit2
+    implementation Deps.retrofit2_gson
+    implementation Deps.logging_interceptor
+
+    //LiveData & ViewModel
+    implementation Deps.viewmodel
+    implementation Deps.livedata
+    implementation Deps.lifecycle_extensions
+
+    //Coroutines
+    implementation Deps.kotlin_coroutines
+
+    //Test
     testImplementation Deps.junit
     androidTestImplementation Deps.extjUnit
     androidTestImplementation Deps.espressoCore
