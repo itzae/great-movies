@@ -6,6 +6,7 @@ import Versions.coroutineVersion
 import Versions.espressocoreVersion
 import Versions.extjunitVersion
 import Versions.fragmentVersion
+import Versions.glideVersion
 import Versions.hiltVersion
 import Versions.hiltViewModelVersion
 import Versions.junitVersion
@@ -42,4 +43,6 @@ object Deps {
     const val kotlin_coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
     const val activityktx = "androidx.activity:activity-ktx:$activityVersion"
     const val fragmentktx = "androidx.fragment:fragment-ktx:$fragmentVersion"
+    const val glide = "com.github.bumptech.glide:glide:$glideVersion"
+   const val glideCompiler = "com.github.bumptech.glide:compiler:$glideVersion"
 }

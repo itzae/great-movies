@@ -16,5 +16,6 @@ object Versions {
     const val logginInterceptorVersion = "4.9.0"
     const val activityVersion = "1.1.0"
     const val fragmentVersion = "1.2.5"
+    const val glideVersion = "4.12.0"
 
 }

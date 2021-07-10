@@ -9,6 +9,10 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId "com.itgonca.greatmovies"
         minSdkVersion 23
@@ -18,7 +22,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "BASE_URL", '"https://api.themoviedb.org/3/"'
-        buildConfigField "String", "API_TOKEN" , '"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMzhkYTFjMjBjYjkwYjRjN2FmY2QzY2YzMGM3NzVmYSIsInN1YiI6IjVlNGMyYmI3Mjg2NmZhMDAxODljZTAxZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bdmZkL9AgUX6wylg1DvVt-JtI6qwawg4dDMJcckyt2Q"'
+        buildConfigField "String", "API_TOKEN", '"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMzhkYTFjMjBjYjkwYjRjN2FmY2QzY2YzMGM3NzVmYSIsInN1YiI6IjVlNGMyYmI3Mjg2NmZhMDAxODljZTAxZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bdmZkL9AgUX6wylg1DvVt-JtI6qwawg4dDMJcckyt2Q"'
     }
 
     buildTypes {
@@ -49,6 +53,8 @@ dependencies {
     implementation Deps.constraintLayout
     implementation Deps.activityktx
     implementation Deps.fragmentktx
+    implementation Deps.glide
+    annotationProcessor Deps.glideCompiler
 
     //DI
     implementation Deps.hiltAndroid

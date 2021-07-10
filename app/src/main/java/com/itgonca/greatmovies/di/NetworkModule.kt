@@ -39,6 +39,6 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun providerTeamsService(builder: Retrofit): MoviesApi = builder.create(MoviesApi::class.java)
+    fun providerMovieService(builder: Retrofit): MoviesApi = builder.create(MoviesApi::class.java)
 
 }

@@ -1,10 +1,13 @@
 package com.itgonca.greatmovies.data.network.api
 
 import com.itgonca.greatmovies.BuildConfig
+import com.itgonca.greatmovies.data.network.model.GenreResponse
+import com.itgonca.greatmovies.data.network.model.Movie
 import com.itgonca.greatmovies.data.network.model.MovieResponse
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface MoviesApi {
 
@@ -20,5 +23,17 @@ interface MoviesApi {
         @Header("Authorization") apiToken: String = "Bearer ${BuildConfig.API_TOKEN}",
         @Path("media_type") mediaType: String = "movie",
         @Path("time_window") timeWindow: String = "week"
-    ): MovieResponse
+    ): MovieResponse<Movie>
+
+    @GET("genre/movie/list")
+    suspend fun getGenres(
+        @Header("Authorization") token: String = "Bearer ${BuildConfig.API_TOKEN}"
+    ): GenreResponse
+
+
+    @GET("discover/movie")
+    suspend fun getCategories(
+        @Header("Authorization") token: String = "Bearer ${BuildConfig.API_TOKEN}",
+        @Query("with_genres") genreId: Int
+    ): MovieResponse<Movie>
 }
