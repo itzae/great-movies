@@ -7,8 +7,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.itgonca.greatmovies.databinding.ItemRowMoviesLayoutBinding
 import com.itgonca.greatmovies.domain.model.CategoryDto
+import com.itgonca.greatmovies.domain.model.MoviePosterDto
 
-class MoviesCategoriesAdapter() :
+class MoviesCategoriesAdapter(private val onItemClick: (MoviePosterDto) -> Unit) :
     ListAdapter<CategoryDto, MoviesCategoriesAdapter.CategoryViewHolder>(CategoryDiffUtilCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
@@ -25,7 +26,7 @@ class MoviesCategoriesAdapter() :
     inner class CategoryViewHolder(private val binding: ItemRowMoviesLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(itemCategory: CategoryDto) {
-            val moviesAdapter = MoviesAdapter()
+            val moviesAdapter = MoviesAdapter { onItemClick(it) }
             moviesAdapter.submitList(itemCategory.listMovie)
             binding.tvCategory.text = itemCategory.name
             binding.rvMovies.adapter = moviesAdapter

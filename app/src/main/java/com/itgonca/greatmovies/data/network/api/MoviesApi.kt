@@ -1,6 +1,7 @@
 package com.itgonca.greatmovies.data.network.api
 
 import com.itgonca.greatmovies.BuildConfig
+import com.itgonca.greatmovies.data.network.model.DetailResponse
 import com.itgonca.greatmovies.data.network.model.GenreResponse
 import com.itgonca.greatmovies.data.network.model.Movie
 import com.itgonca.greatmovies.data.network.model.MovieResponse
@@ -17,23 +18,35 @@ interface MoviesApi {
      * over a 7 day period, with a 7 day half life.
      * @param mediaType it is the type of content eg. movie,tv,etc.
      * @param timeWindow is the follow-up time eg. day,week,etc.
+     * @return [MovieResponse]
      */
     @GET("trending/{media_type}/{time_window}")
     suspend fun trendingMovies(
-        @Header("Authorization") apiToken: String = "Bearer ${BuildConfig.API_TOKEN}",
         @Path("media_type") mediaType: String = "movie",
-        @Path("time_window") timeWindow: String = "week"
+        @Path("time_window") timeWindow: String = "week",
+        @Query("language") languaje: String
     ): MovieResponse<Movie>
 
     @GET("genre/movie/list")
     suspend fun getGenres(
-        @Header("Authorization") token: String = "Bearer ${BuildConfig.API_TOKEN}"
+        @Query("language") languaje: String
     ): GenreResponse
 
 
     @GET("discover/movie")
     suspend fun getCategories(
-        @Header("Authorization") token: String = "Bearer ${BuildConfig.API_TOKEN}",
-        @Query("with_genres") genreId: Int
+        @Query("with_genres") genreId: Int,
+        @Query("language") languaje: String
     ): MovieResponse<Movie>
+
+    /**
+     * Get the primary information about a movie.
+     * @param  movieId it is the id of the movie
+     */
+    @GET("movie/{movie_id}")
+    suspend fun getMovieDetail(
+        @Path("movie_id") movieId: Int,
+        @Query("language") languaje: String,
+        @Query("append_to_response") appendResponse: String = "credits"
+    ): DetailResponse
 }

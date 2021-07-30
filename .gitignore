@@ -51,6 +51,7 @@ captures/
 /captures
 .externalNativeBuild
 .cxx/
+/.idea/sonarlint/issuestore
 
 # Google Services (e.g. APIs or Firebase)
 # google-services.json

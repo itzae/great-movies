@@ -23,6 +23,11 @@ open class MainActivity : AppCompatActivity() {
         initComponents()
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        navController?.navigateUp()
+        return super.onSupportNavigateUp()
+    }
+
     private fun initComponents() {
         navController = Navigation.findNavController(this, R.id.navHostFragment)
         NavigationUI.setupWithNavController(binding.bottomNav, navController!!)

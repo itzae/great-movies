@@ -17,9 +17,12 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(private val moviesRepository: MoviesRepository) :
     ViewModel() {
 
-
     private val _listMovies = MutableLiveData<StateUi<List<CategoryDto>>>()
     val listMovies: LiveData<StateUi<List<CategoryDto>>> get() = _listMovies
+
+    init {
+        fetchtrendingMovies()
+    }
 
     fun fetchtrendingMovies() {
         viewModelScope.launch {

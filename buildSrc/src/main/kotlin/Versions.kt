@@ -17,5 +17,6 @@ object Versions {
     const val activityVersion = "1.1.0"
     const val fragmentVersion = "1.2.5"
     const val glideVersion = "4.12.0"
+    const val exoplayerVersion = "2.14.1"
 
 }

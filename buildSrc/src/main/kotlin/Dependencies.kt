@@ -4,6 +4,7 @@ import Versions.constraintlayoutVersion
 import Versions.coreKtxVersion
 import Versions.coroutineVersion
 import Versions.espressocoreVersion
+import Versions.exoplayerVersion
 import Versions.extjunitVersion
 import Versions.fragmentVersion
 import Versions.glideVersion
@@ -39,10 +40,15 @@ object Deps {
     const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
     const val lifecycle_extensions = "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
-    const val logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$logginInterceptorVersion"
-    const val kotlin_coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
+    const val logging_interceptor =
+        "com.squareup.okhttp3:logging-interceptor:$logginInterceptorVersion"
+    const val kotlin_coroutines =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
     const val activityktx = "androidx.activity:activity-ktx:$activityVersion"
     const val fragmentktx = "androidx.fragment:fragment-ktx:$fragmentVersion"
     const val glide = "com.github.bumptech.glide:glide:$glideVersion"
-   const val glideCompiler = "com.github.bumptech.glide:compiler:$glideVersion"
+    const val glideCompiler = "com.github.bumptech.glide:compiler:$glideVersion"
+    const val exoplayerCore = "com.google.android.exoplayer:exoplayer-core:$exoplayerVersion"
+    const val exoplayerDash = "com.google.android.exoplayer:exoplayer-dash:$exoplayerVersion"
+    const val exoplayerUi = "com.google.android.exoplayer:exoplayer-ui:$exoplayerVersion"
 }

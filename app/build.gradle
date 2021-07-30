@@ -56,6 +56,11 @@ dependencies {
     implementation Deps.glide
     annotationProcessor Deps.glideCompiler
 
+    //Exoplayer
+    implementation Deps.exoplayerCore
+    implementation Deps.exoplayerDash
+    implementation Deps.exoplayerUi
+
     //DI
     implementation Deps.hiltAndroid
     implementation Deps.hiltViewModel

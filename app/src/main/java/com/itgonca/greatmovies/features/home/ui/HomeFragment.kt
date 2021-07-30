@@ -4,14 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.itgonca.greatmovies.MainActivity
+import com.itgonca.greatmovies.R
 import com.itgonca.greatmovies.databinding.FragmentHomeBinding
 import com.itgonca.greatmovies.domain.model.CategoryDto
 import com.itgonca.greatmovies.features.home.ui.adapter.MoviesCategoriesAdapter
 import com.itgonca.greatmovies.features.home.viewmodel.HomeViewModel
+import com.itgonca.greatmovies.utils.Constants.ID_MOVIE
 import com.itgonca.greatmovies.utils.StateUi
 import com.itgonca.greatmovies.utils.asActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -26,7 +30,13 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        categoryAdapter = MoviesCategoriesAdapter()
+        categoryAdapter =
+            MoviesCategoriesAdapter {
+                findNavController().navigate(
+                    R.id.action_homeFragment_to_movieDetail,
+                    bundleOf(ID_MOVIE to it.idMovie)
+                )
+            }
     }
 
     override fun onCreateView(
@@ -42,8 +52,6 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initUI()
         initObservers()
-        homeViewModel.fetchtrendingMovies()
-
     }
 
 

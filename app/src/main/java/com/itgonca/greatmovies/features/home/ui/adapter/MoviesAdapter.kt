@@ -11,7 +11,7 @@ import com.itgonca.greatmovies.utils.Constants.IMAGE_BASE_URL
 import com.itgonca.greatmovies.utils.SizeImages.W154
 import com.itgonca.greatmovies.utils.loadImage
 
-class MoviesAdapter :
+class MoviesAdapter(private val onItemClick: (MoviePosterDto) -> Unit) :
     ListAdapter<MoviePosterDto, MoviesAdapter.MoviesViewHolder>(MoviesPosterDiffUtilCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
@@ -29,6 +29,7 @@ class MoviesAdapter :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(itemMovie: MoviePosterDto) {
             binding.ivPosterMovie.loadImage("$IMAGE_BASE_URL$W154${itemMovie.pathImage}")
+            itemView.setOnClickListener { onItemClick(itemMovie) }
         }
     }
 }

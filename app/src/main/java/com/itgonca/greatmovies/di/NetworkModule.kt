@@ -7,10 +7,13 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.*
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
@@ -32,13 +35,27 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun providerHttpClient() =
+    fun providerHttpClient(defaultInterceptor: Interceptor) =
         OkHttpClient.Builder().addInterceptor(HttpLoggingInterceptor().apply {
             if (BuildConfig.DEBUG) level = HttpLoggingInterceptor.Level.BODY
-        })
+        }).addInterceptor(defaultInterceptor)
 
     @Singleton
     @Provides
     fun providerMovieService(builder: Retrofit): MoviesApi = builder.create(MoviesApi::class.java)
 
+    @Singleton
+    @Provides
+    @Named("languajeDevice")
+    fun provideLanguageOfDevice(): String = Locale.getDefault().toLanguageTag()
+
+    @Singleton
+    @Provides
+    fun provideDefaultInterceptor(): Interceptor = Interceptor { chain ->
+        val request = chain.request()
+            .newBuilder()
+            .addHeader("Authorization", "Bearer ${BuildConfig.API_TOKEN}")
+            .build()
+        return@Interceptor chain.proceed(request)
+    }
 }
