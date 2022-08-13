@@ -22,5 +22,6 @@ object Versions {
     const val archCoreVersion = "2.1.0"
     const val coroutinesTestVersion = "1.5.0"
     const val roomVersion = "2.3.0"
+    const val compose_version = "1.1.1"
 
 }

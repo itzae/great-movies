@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'com.github.ben-manes.versions'
 }
 
 android {
@@ -11,6 +12,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        compose true
     }
 
     defaultConfig {
@@ -39,6 +41,10 @@ android {
         jvmTarget = '1.8'
     }
 
+    composeOptions {
+        kotlinCompilerExtensionVersion Versions.compose_version
+    }
+
 
 }
 
@@ -46,6 +52,15 @@ dependencies {
     //Core
     implementation Deps.kotlin
     implementation Deps.corektx
+
+    // Compose
+    implementation Deps.compose_runtime
+    implementation Deps.compose_ui
+    implementation Deps.compose_foundation
+    implementation Deps.compose_foundation_layout
+    implementation Deps.compose_material
+    implementation Deps.compose_runtime_livedata
+    implementation Deps.compose_ui_tooling
 
     //UI
     implementation Deps.appcompat

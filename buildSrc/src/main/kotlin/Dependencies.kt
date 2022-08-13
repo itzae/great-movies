@@ -1,6 +1,7 @@
 import Versions.activityVersion
 import Versions.appcompatVersion
 import Versions.archCoreVersion
+import Versions.compose_version
 import Versions.constraintlayoutVersion
 import Versions.coreKtxVersion
 import Versions.coroutineVersion
@@ -64,4 +65,12 @@ object Deps {
         "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVersion"
     const val coroutinesTestCore =
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesTestVersion"
+
+    const val compose_runtime = "androidx.compose.runtime:runtime:$compose_version"
+    const val compose_ui = "androidx.compose.ui:ui:$compose_version"
+    const val compose_foundation = "androidx.compose.foundation:foundation:$compose_version"
+    const val compose_foundation_layout = "androidx.compose.foundation:foundation-layout:$compose_version"
+    const val compose_material = "androidx.compose.material:material:$compose_version"
+    const val compose_runtime_livedata = "androidx.compose.runtime:runtime-livedata:$compose_version"
+    const val compose_ui_tooling = "androidx.compose.ui:ui-tooling:$compose_version"
 }
