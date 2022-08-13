@@ -39,6 +39,7 @@ captures/
 # IntelliJ
 *.iml
 .gradle
+/.idea/sonarlint
 /local.properties
 /.idea/caches
 /.idea/libraries

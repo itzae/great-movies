@@ -84,8 +84,20 @@ dependencies {
     //Coroutines
     implementation Deps.kotlin_coroutines
 
+    //Room
+    implementation Deps.roomRuntime
+    implementation Deps.roomKtx
+    kapt Deps.roomCompiler
+
     //Test
     testImplementation Deps.junit
     androidTestImplementation Deps.extjUnit
     androidTestImplementation Deps.espressoCore
+
+    testImplementation Deps.ioMock
+
+    //Coroutines
+    testImplementation Deps.archCore
+    testImplementation Deps.coroutinesTest
+    testImplementation Deps.coroutinesTestCore
 }

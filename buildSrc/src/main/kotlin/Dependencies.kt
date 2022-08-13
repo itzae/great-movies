@@ -1,8 +1,10 @@
 import Versions.activityVersion
 import Versions.appcompatVersion
+import Versions.archCoreVersion
 import Versions.constraintlayoutVersion
 import Versions.coreKtxVersion
 import Versions.coroutineVersion
+import Versions.coroutinesTestVersion
 import Versions.espressocoreVersion
 import Versions.exoplayerVersion
 import Versions.extjunitVersion
@@ -15,8 +17,10 @@ import Versions.kotlinVersion
 import Versions.lifecycleVersion
 import Versions.logginInterceptorVersion
 import Versions.materialVersion
+import Versions.mockVersion
 import Versions.navigationVersion
 import Versions.retrofit2Version
+import Versions.roomVersion
 
 object Deps {
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
@@ -51,4 +55,13 @@ object Deps {
     const val exoplayerCore = "com.google.android.exoplayer:exoplayer-core:$exoplayerVersion"
     const val exoplayerDash = "com.google.android.exoplayer:exoplayer-dash:$exoplayerVersion"
     const val exoplayerUi = "com.google.android.exoplayer:exoplayer-ui:$exoplayerVersion"
+    const val roomRuntime = "androidx.room:room-runtime:$roomVersion"
+    const val roomCompiler = "androidx.room:room-compiler:$roomVersion"
+    const val roomKtx = "androidx.room:room-ktx:$roomVersion"
+    const val ioMock = "io.mockk:mockk:$mockVersion"
+    const val archCore = "androidx.arch.core:core-testing:$archCoreVersion"
+    const val coroutinesTest =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVersion"
+    const val coroutinesTestCore =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesTestVersion"
 }

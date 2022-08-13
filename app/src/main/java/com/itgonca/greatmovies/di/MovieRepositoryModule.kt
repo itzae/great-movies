@@ -1,6 +1,6 @@
 package com.itgonca.greatmovies.di
 
-import com.itgonca.greatmovies.data.network.repository.MoviesRepositoryImpl
+import com.itgonca.greatmovies.data.repository.MoviesRepositoryImpl
 import com.itgonca.greatmovies.domain.repository.MoviesRepository
 import dagger.Binds
 import dagger.Module
