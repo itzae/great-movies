@@ -30,7 +30,7 @@ class MoviesRepositoryImplTest {
     @Before
     fun setUp() {
         MockKAnnotations.init(this)
-        moviesRepository = MoviesRepositoryImpl(moviesRemoteSource, testDispatcher)
+       // moviesRepository = MoviesRepositoryImpl(moviesRemoteSource, testDispatcher)
     }
 
     @Test

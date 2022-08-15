@@ -24,9 +24,11 @@
     <style name="TextExpanded" parent="TextAppearance.AppCompat.Display1">
         <item name="android:textColor">@color/white</item>>
     </style>
+
     <style name="TextCollapsed" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/white</item>>
     </style>
+
     <style name="ToolbarTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorControlNormal">?attr/colorOnPrimary</item>
     </style>
@@ -35,6 +37,7 @@
         <item name="android:textColor">?attr/colorOnPrimary</item>
         <item name="android:fontFamily">@font/gotham_medium</item>
     </style>
+
     <style name="App.Text.Body" parent="TextAppearance.MaterialComponents.Body1">
         <item name="android:textColor">?attr/colorOnPrimary</item>
         <item name="android:fontFamily">@font/gotham_book</item>
