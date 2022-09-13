@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
     buildToolsVersion "30.0.3"
 
     buildFeatures {
@@ -18,7 +18,7 @@ android {
     defaultConfig {
         applicationId "com.itgonca.greatmovies"
         minSdkVersion 23
-        targetSdkVersion 31
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -77,7 +77,7 @@ dependencies {
     implementation Deps.activityktx
     implementation Deps.fragmentktx
     implementation Deps.glide
-    implementation 'androidx.activity:activity-compose:1.3.1'
+    implementation Deps.compose_activity
 
     annotationProcessor Deps.glideCompiler
 
@@ -88,7 +88,7 @@ dependencies {
 
     //DI
     implementation Deps.hiltAndroid
-    implementation Deps.hiltViewModel
+    //implementation Deps.hiltViewModel
 
     kapt Deps.hiltCompiler
     kapt Deps.hiltAndroidCompiler
@@ -105,7 +105,6 @@ dependencies {
     //LiveData & ViewModel
     implementation Deps.viewmodel
     implementation Deps.livedata
-    implementation Deps.lifecycle_extensions
 
     //Coroutines
     implementation Deps.kotlin_coroutines

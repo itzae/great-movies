@@ -1,6 +1,7 @@
 import Versions.activityVersion
 import Versions.appcompatVersion
 import Versions.archCoreVersion
+import Versions.compose_activity_version
 import Versions.compose_version
 import Versions.constraintlayoutVersion
 import Versions.coreKtxVersion
@@ -43,8 +44,8 @@ object Deps {
     const val retrofit2 = "com.squareup.retrofit2:retrofit:$retrofit2Version"
     const val retrofit2_gson = "com.squareup.retrofit2:converter-gson:$retrofit2Version"
     const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    const val viewmodel_compose = "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion"
     const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
-    const val lifecycle_extensions = "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
     const val logging_interceptor =
         "com.squareup.okhttp3:logging-interceptor:$logginInterceptorVersion"
     const val kotlin_coroutines =
@@ -73,4 +74,5 @@ object Deps {
     const val compose_material = "androidx.compose.material:material:$compose_version"
     const val compose_runtime_livedata = "androidx.compose.runtime:runtime-livedata:$compose_version"
     const val compose_ui_tooling = "androidx.compose.ui:ui-tooling:$compose_version"
+    const val compose_activity = "androidx.activity:activity-compose:$compose_activity_version"
 }

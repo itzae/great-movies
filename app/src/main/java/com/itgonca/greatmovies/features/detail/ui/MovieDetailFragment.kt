@@ -1,6 +1,5 @@
 package com.itgonca.greatmovies.features.detail.ui
 
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,13 +17,11 @@ import com.itgonca.greatmovies.features.detail.ui.adapter.GenresMovieAdapter
 import com.itgonca.greatmovies.features.detail.viewmodel.DetailViewModel
 import com.itgonca.greatmovies.utils.Constants.ID_MOVIE
 import com.itgonca.greatmovies.utils.Constants.IMAGE_BASE_URL
-import com.itgonca.greatmovies.utils.SizeImages.W154
 import com.itgonca.greatmovies.utils.SizeImages.W780
 import com.itgonca.greatmovies.utils.StateUi
 import com.itgonca.greatmovies.utils.asActivity
 import com.itgonca.greatmovies.utils.loadImage
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.*
 
 @AndroidEntryPoint
 class MovieDetailFragment : Fragment() {

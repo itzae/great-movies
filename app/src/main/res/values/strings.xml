@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Great Movies</string>
     <string name="title_activity_main_compose">MainActivityCompose</string>
+
+    <!--Content description-->
+    <string name="search_button_content_description">search button</string>
 </resources>
