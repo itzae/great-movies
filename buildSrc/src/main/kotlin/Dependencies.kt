@@ -2,6 +2,7 @@ import Versions.activityVersion
 import Versions.appcompatVersion
 import Versions.archCoreVersion
 import Versions.compose_activity_version
+import Versions.compose_navigation_version
 import Versions.compose_version
 import Versions.constraintlayoutVersion
 import Versions.coreKtxVersion
@@ -75,4 +76,5 @@ object Deps {
     const val compose_runtime_livedata = "androidx.compose.runtime:runtime-livedata:$compose_version"
     const val compose_ui_tooling = "androidx.compose.ui:ui-tooling:$compose_version"
     const val compose_activity = "androidx.activity:activity-compose:$compose_activity_version"
+    const val compose_navigation = "androidx.navigation:navigation-compose:$compose_navigation_version"
 }

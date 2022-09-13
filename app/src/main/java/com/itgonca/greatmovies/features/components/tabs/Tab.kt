@@ -1,4 +1,4 @@
-package com.itgonca.greatmovies.features.components
+package com.itgonca.greatmovies.features.components.tabs
 
 import com.itgonca.greatmovies.R
 

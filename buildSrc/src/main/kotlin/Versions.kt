@@ -9,7 +9,7 @@ object Versions {
     const val espressocoreVersion = "3.4.0"
     const val hiltVersion = "2.42"
     const val hiltViewModelVersion = "1.0.0-alpha01"
-    const val navigationVersion = "2.3.5"
+    const val navigationVersion = "2.5.1"
     const val retrofit2Version = "2.9.0"
     const val coroutineVersion = "1.3.6"
     const val lifecycleVersion = "2.5.1"
@@ -24,5 +24,6 @@ object Versions {
     const val roomVersion = "2.3.0"
     const val compose_version = "1.2.0"
     const val compose_activity_version = "1.5.1"
+    const val compose_navigation_version ="2.5.1"
 
 }

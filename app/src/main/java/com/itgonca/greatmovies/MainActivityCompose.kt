@@ -3,15 +3,10 @@ package com.itgonca.greatmovies
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.core.view.WindowCompat
-import com.itgonca.greatmovies.features.home.ui.compose.HomeScreen
+import androidx.compose.material.Scaffold
+import androidx.navigation.compose.rememberNavController
+import com.itgonca.greatmovies.features.components.bottombar.BottomNavBarGreatMovies
+import com.itgonca.greatmovies.features.navigation.BottomBarNavGraph
 import com.itgonca.greatmovies.ui.theme.GreatMoviesTheme
 
 class MainActivityCompose : ComponentActivity() {
@@ -20,12 +15,14 @@ class MainActivityCompose : ComponentActivity() {
         setContent {
             GreatMoviesTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    HomeScreen()
+                val navController = rememberNavController()
+                Scaffold(bottomBar = { BottomNavBarGreatMovies(navController = navController) }) { paddingValues ->
+                    BottomBarNavGraph(
+                        navController = navController,
+                        innerPaddingValues = paddingValues
+                    )
                 }
+
             }
         }
     }

@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/StudioProjects/GreatMovies/app/src/main/res/drawable/ic_event_ticket.xml" value="0.1" />
+        <entry key="..\:/StudioProjects/GreatMovies/app/src/main/res/drawable/ic_notification.xml" value="0.1" />
         <entry key="..\:/StudioProjects/GreatMovies/app/src/main/res/drawable/ic_play.xml" value="0.271" />
         <entry key="..\:/StudioProjects/GreatMovies/app/src/main/res/drawable/ic_watch.xml" value="0.271" />
         <entry key="..\:/StudioProjects/GreatMovies/app/src/main/res/layout/content_detail_movie_layout.xml" value="0.15555555555555556" />

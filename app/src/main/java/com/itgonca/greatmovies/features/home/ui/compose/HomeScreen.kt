@@ -3,11 +3,7 @@ package com.itgonca.greatmovies.features.home.ui.compose
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -17,21 +13,23 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.itgonca.greatmovies.R
-import com.itgonca.greatmovies.features.components.Tab
-import com.itgonca.greatmovies.features.components.TabRowCustom
+import com.itgonca.greatmovies.features.components.tabs.Tab
+import com.itgonca.greatmovies.features.components.tabs.TabRowCustom
 import com.itgonca.greatmovies.ui.theme.GreatMoviesTheme
 
 @Composable
-fun HomeScreen() {
-    LazyColumn(modifier = Modifier.fillMaxSize()) {
-        item { AppBar() }
-        item {
-            TabRowCustom(
-                modifier = Modifier.padding(16.dp),
-                tabs = listOf(Tab.NowShowing, Tab.ComingSoon)
-            )
-        }
+fun HomeScreen(modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+    ) {
+        AppBar()
+        TabRowCustom(
+            modifier = Modifier.padding(16.dp),
+            tabs = listOf(Tab.NowShowing, Tab.ComingSoon)
+        )
     }
+
 }
 
 @Composable

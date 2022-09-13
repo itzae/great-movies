@@ -1,4 +1,4 @@
-package com.itgonca.greatmovies.features.components
+package com.itgonca.greatmovies.features.components.tabs
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.animation.core.LinearEasing

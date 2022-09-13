@@ -88,14 +88,13 @@ dependencies {
 
     //DI
     implementation Deps.hiltAndroid
-    //implementation Deps.hiltViewModel
-
     kapt Deps.hiltCompiler
     kapt Deps.hiltAndroidCompiler
 
     //Navigation
     implementation Deps.navigationFragment
     implementation Deps.navigationUi
+    implementation Deps.compose_navigation
 
     //Retrofit
     implementation Deps.retrofit2
